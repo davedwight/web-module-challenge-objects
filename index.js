@@ -165,7 +165,7 @@ Use the getReviewsByRating function below to do the following:
 
 function getReviewByRating(arr, testRating) {
   let rangeReviews = [];
-  for(i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++){
     if(Math.floor(arr[i].rating) === Math.floor(testRating)) {
       rangeReviews.push(arr[i]); 
     }
@@ -190,10 +190,17 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(arr) {
+  let longReviews = []
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i].feedback.split(" ").length > 14){
+      longReviews.push(arr[i]);
+    }
   }
-  
+  console.log(longReviews);
+  return longReviews;
+}
+getLongReviews(reviews);
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -213,7 +220,7 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
+function carMaker(odometer) {
     /* code here */
     
 }
