@@ -16,7 +16,7 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-  return {name, price, category}
+    return {name, price, category}
 }
 
 console.log(createMenuItem('tacos', 8, 'Lunch'));
