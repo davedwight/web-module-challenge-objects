@@ -163,9 +163,18 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+function getReviewByRating(arr, testRating) {
+  let rangeReviews = [];
+  for(i = 0; i < arr.length; i++){
+    if(Math.floor(arr[i].rating) === Math.floor(testRating)) {
+      rangeReviews.push(arr[i]); 
+    }
   }
+  console.log(rangeReviews);
+  return rangeReviews;
+}
+
+getReviewByRating(reviews, 4);
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
