@@ -220,10 +220,21 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(odometer) {
-    /* code here */
-    
+function carMaker(odometer, distance) {
+  let car1 = {
+    year: 2000,
+    make: 'Ford',
+    odometer: odometer,
+    drive: function(distance){
+      this.odometer += distance;
+      return this.odometer;
+    }
+  }
+  car1.drive(distance);
+  console.log(car1);
 }
+carMaker(500, 50);
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
